@@ -5,6 +5,9 @@ const dotenv = require("dotenv");
 const authroute = require("./routes/Auth.js");
 const usersroute = require("./routes/Users.js");
 const movies_route = require("./routes/Movies.js");
+const cors = require("cors");
+
+app.use(cors());
 dotenv.config();
 
 // connect with the databse here
