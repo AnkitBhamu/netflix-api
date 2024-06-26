@@ -49,3 +49,5 @@ let fn = hello();
 let fn2 = hello();
 fn()
 fn2()
+
+12. CORS is thing that if client asks from a server at the start then its server and process must be same throught fetching but if a response from server allowed this cross origin then browser accepts it , therefore we have to use cors() middleware that adds proper policies in the response obj.
