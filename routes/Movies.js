@@ -1,15 +1,28 @@
 // for login th euser
 const router = require("express").Router();
-const express = require("express");
 const Movies = require("../Schemas/Movies");
 const Lists = require("../Schemas/List");
 const path = require("path");
 var AWS = require("aws-sdk");
 const multer = require("multer");
-const List = require("../Schemas/List");
+const jwt = require("jsonwebtoken");
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+
+function authorize_user(req, res, next) {
+  if (!req.headers || !req.headers.authorization) {
+    res.status(404).json("Authorization failed!!");
+  } else {
+    let token = req.headers.authorization.split(" ")[1];
+    try {
+      jwt.verify(token, process.env.SECRET_KEY);
+      next();
+    } catch (err) {
+      res.status(404).json("Authorization failed!!");
+    }
+  }
+}
 
 // initiliase our aws client
 const s3 = new AWS.S3({
@@ -60,15 +73,12 @@ router.post("/upload", async (req, res) => {
     await uploadFilesAWS(files[4], "trailer-videos");
     res.status(200).json("Upload data on AWS is success!!");
   } catch (err) {
-    // console.log(err);
     res.status(404).json(err);
   }
 });
 
 router.post("/deleteAWS", async (req, res) => {
   try {
-    // console.log("Sending...!!");
-    // console.log("data to be deleted is : ", req.body);
     let content_data = [];
     content_data.push(path.basename(req.body.cover_img));
     content_data.push(path.basename(req.body.thumb_img));
@@ -122,7 +132,6 @@ router.post("/delete", async (req, res) => {
 // GET
 router.get("/moviebyId/:id", async (req, res) => {
   try {
-    // console.log("request came!!", req.params.id);
     let movie = await Movies.findById(req.params.id);
 
     if (movie) {
@@ -134,20 +143,48 @@ router.get("/moviebyId/:id", async (req, res) => {
 });
 
 // GET A RANDOM MOVIE or series FOR PREVIEWING
-router.get("/preview/:type", async (req, res) => {
+router.get("/preview/:type", authorize_user, async (req, res) => {
   let type = req.params.type;
-  // console.log("Type entered is : ", type);
   try {
     let contents = [];
     if (type === "movies") contents = await Movies.find({ isSeries: false });
     else contents = await Movies.find({ isSeries: true });
 
-    // console.log("Matched content length is : ", contents.length);
-
     if (contents.length != 0) {
       let chosen_content =
         contents[Math.floor(Math.random() * contents.length)];
       res.status(200).json(chosen_content._doc);
+    } else throw "Query result not found!!";
+  } catch (err) {
+    res.status(404).json(err);
+  }
+});
+
+router.get("/preview2/:type", authorize_user, async (req, res) => {
+  let type = req.params.type;
+  try {
+    let contents = [];
+    if (type === "movies") contents = await Movies.find({ isSeries: false });
+    else contents = await Movies.find({ isSeries: true });
+
+    if (contents.length != 0) {
+      const shuffle = ([...arr]) => {
+        let m = arr.length;
+        while (m) {
+          const i = Math.floor(Math.random() * m--);
+          [arr[m], arr[i]] = [arr[i], arr[m]];
+        }
+        return arr;
+      };
+
+      let chosen_content = shuffle(contents).slice(0, 3);
+      console.log("content is : ", chosen_content.length);
+
+      let data = chosen_content.map((item, index) => item._doc);
+
+      // let chosen_content =
+      //   contents[Math.floor(Math.random() * contents.length)];
+      res.status(200).json(data);
     } else throw "Query result not found!!";
   } catch (err) {
     res.status(404).json(err);
@@ -161,7 +198,22 @@ router.get("/getAll", async (req, res) => {
     contents = await Movies.find({}, null, {
       sort: { name: 1 },
     });
-    // console.log("Matched content length is : ", contents.length);
+
+    let response = {};
+    response["data"] = contents.map((element) => element._doc);
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(404).json(err);
+  }
+});
+
+// GET ALL lists for the admin level
+router.get("/listsAll", authorize_user, async (req, res) => {
+  try {
+    let contents = [];
+    contents = await List.find({}, null, {
+      sort: { name: 1 },
+    });
 
     let response = {};
     response["data"] = contents.map((element) => element._doc);
@@ -175,7 +227,7 @@ router.get("/getAll", async (req, res) => {
 router.post("/createList", async (req, res) => {
   let type = req.body;
 
-  let n_list = new List(req.body);
+  let n_list = new Lists(req.body);
 
   try {
     await n_list.save({ new: true });
@@ -196,11 +248,9 @@ router.post("/deleteList", async (req, res) => {
   }
 });
 
-// GET ALL lists for the admin level
-router.get("/listsAll/:type", async (req, res) => {
+router.get("/listsAll/:type", authorize_user, async (req, res) => {
   try {
     let contents = [];
-    // console.log("params is : ", req.params);
     contents = await Lists.find(
       { type: req.params.type === "movies" ? "movies" : "series" },
       null,
@@ -208,7 +258,6 @@ router.get("/listsAll/:type", async (req, res) => {
         sort: { name: 1 },
       }
     );
-    // console.log("Matched content length is : ", contents.length);
 
     let response = {};
     response["data"] = contents.map((element) => element._doc);
@@ -221,15 +270,12 @@ router.get("/listsAll/:type", async (req, res) => {
 // get content lists;
 router.get("/lists:type", async (req, res) => {
   let type = req.params.type;
-  // console.log("Type entered is : ", type);
 
   try {
     let all_lists = await Lists.find({ type: type });
     let response_data = all_lists.map((element) => {
       return element._doc;
     });
-
-    // console.log("response data is : ", response_data);
 
     if (response_data.length != 0) {
       res.status(200).json({ data: response_data });

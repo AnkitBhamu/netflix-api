@@ -10,7 +10,9 @@
 
 6. response must be sent in each api call othrwise it will stuck
 
-7. closures concepts as taught in COL226
+7. next() fn in the middlewares is used to call next middleware in express. so every middleware has this struct function mid(req,res,next)
+
+8. closures concepts as taught in COL226
    // Online Javascript Editor for free
    // Write, Edit and Run your Javascript code using JS Online Compiler
 

@@ -3,11 +3,24 @@ const router = require("express").Router();
 const express = require("express");
 const User = require("../Schemas/User");
 const crypto = require("crypto-js");
+const jwt = require("jsonwebtoken");
+
+function authorize_user(req, res, next) {
+  if (!req.headers || !req.headers.authorization) {
+    res.status(404).json("Authorization failed!!");
+  } else {
+    let token = req.headers.authorization.split(" ")[1];
+    try {
+      jwt.verify(token, process.env.SECRET_KEY);
+      next();
+    } catch (err) {
+      res.status(404).json("Authorization failed!!");
+    }
+  }
+}
 
 // UPDATE ITS ACCOUNT
-// USER CAN CHANGE THE PROPERTIES OF ITS ACCOUNT
-
-router.get("/getUser/:id", async (req, res) => {
+router.get("/getUser/:id", authorize_user, async (req, res) => {
   try {
     // console.log(req.params.id);
     let user = await User.findById(req.params.id);
@@ -25,7 +38,7 @@ router.get("/getUser/:id", async (req, res) => {
   }
 });
 
-router.post("/update", async (req, res) => {
+router.post("/update", authorize_user, async (req, res) => {
   let update_data = {
     name: req.body.name,
     email: req.body.email,
@@ -41,14 +54,17 @@ router.post("/update", async (req, res) => {
       new: true,
     });
     let { password, mylist, ...info } = resp._doc;
+    info.token = jwt.sign(info, process.env.SECRET_KEY, {
+      algorithm: "HS256",
+      expiresIn: "7d",
+    });
     res.status(200).json(info);
   } catch (err) {
-    // console.log(err);
     res.status(404).json(err);
   }
 });
 
-router.get("/getMyList/:id", async (req, res) => {
+router.get("/getMyList/:id", authorize_user, async (req, res) => {
   try {
     const resp = await User.findById(req.params.id);
     let { password, mylist, ...info } = resp._doc;
@@ -59,7 +75,7 @@ router.get("/getMyList/:id", async (req, res) => {
   }
 });
 
-router.post("/updateMyList/:id", async (req, res) => {
+router.post("/updateMyList/:id", authorize_user, async (req, res) => {
   try {
     let operation =
       req.body.mode === "add"

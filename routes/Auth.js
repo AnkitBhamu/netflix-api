@@ -3,6 +3,7 @@ const router = require("express").Router();
 const express = require("express");
 const User = require("../Schemas/User");
 const crypto = require("crypto-js");
+const jwt = require("jsonwebtoken");
 
 async function isUserexists(email) {
   let res = await User.findOne({ email: email });
@@ -14,10 +15,7 @@ async function isUserexists(email) {
 // register function
 router.post("/register", async (req, res) => {
   let status = await isUserexists(req.body.email);
-
   let name = Math.random().toString(36).slice(2, 10);
-  // console.log("name and pass is : ", req.body.password);
-
   if (status) {
     res.status(200).json("UserExists!");
     return;
@@ -31,10 +29,15 @@ router.post("/register", async (req, res) => {
         process.env.SECRET_KEY
       ).toString(),
     });
-    // save is asyn function
 
     const resp = await user.save();
-    let { password, ...info } = resp._doc;
+    let { password, mylist, ...info } = resp._doc;
+
+    info.token = jwt.sign(info, process.env.SECRET_KEY, {
+      algorithm: "HS256",
+      expiresIn: "7d",
+    });
+
     res.json(info);
   } catch (err) {
     res.status(500).json("Check params!!");
@@ -43,11 +46,8 @@ router.post("/register", async (req, res) => {
 
 // LOGIN
 router.post("/login", async (req, res) => {
-  // console.log(req.body);
   try {
     const user = await User.findOne({ email: req.body.email });
-    // console.log("user pass is : ", user.password);
-
     if (!user) {
       res.status(404).json("Invalid entries Try again");
     }
@@ -58,13 +58,16 @@ router.post("/login", async (req, res) => {
         process.env.SECRET_KEY
       ).toString(crypto.enc.Utf8);
 
-      // console.log("decrypt pass is : ", decrypt_pass);
-
       if (decrypt_pass !== req.body.password) {
         res.status(404).json("Invalid entries Try again");
       } else {
-        // send th user details instead of its password
-        const { password, ...info } = user._doc;
+        const { password, mylist, ...info } = user._doc;
+
+        info.token = jwt.sign(info, process.env.SECRET_KEY, {
+          algorithm: "HS256",
+          expiresIn: "7d",
+        });
+
         res.status(200).json(info);
       }
     }

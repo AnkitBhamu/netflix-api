@@ -1,0 +1,288 @@
+[{
+  "_id": {
+    "$oid": "6674f8055fb3076a844e86ca"
+  },
+  "name": "Ant-Man",
+  "desc": "Ant-Man is a legacy super-hero name, primarily associated with the ability to shrink in size. The original was Hank Pym; he was a founding member of the Avengers. Scott Lang took the name, an ex-con who broke into the New Jersey home of Dr. Henry Pym, and stole the Ant-Man's Suit.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/ant_man_and_the_wasp__quantumania_textless__1_by_mintmovi3_dfouypn-fullview.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/ant_man_and_the_wasp__quantumania_textless__1_by_mintmovi3_dfouypn-fullview.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/1200px-Ant-man-logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "117 mins",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2015",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T03:48:21.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T03:48:21.587Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674f8f4bc7528603185640e"
+  },
+  "name": "Avengers  Infinity War",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/717S53NqUgL.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/717S53NqUgL.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Avengers-infinity-war-logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T03:52:20.874Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T03:52:20.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674f99c33c8144f87b3515e"
+  },
+  "name": "Avengers Age of Ultron",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/avengers__age_of_ultron__hi_res_textless_poster__by_phetvanburton_d8ktr9h-fullview.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/avengers__age_of_ultron__hi_res_textless_poster__by_phetvanburton_d8ktr9h-fullview.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Avengers-age-of-ultron-logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T03:55:08.667Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T03:55:08.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674f9db33c8144f87b35162"
+  },
+  "name": "Avengers Endgame",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/dda9a0f55225253f670ea3a34f9482e2.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/dda9a0f55225253f670ea3a34f9482e2.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Avengers_Endgame_Logo_Black.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T03:56:11.455Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T03:56:11.455Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fab2175b733208779c91"
+  },
+  "name": "Black Panther",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/black-panther-moe.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/black-panther-moe.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Black_Panther_Logo_Black.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T03:59:46.851Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T03:59:46.851Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fb07175b733208779c95"
+  },
+  "name": "Black Widow",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/black-widow-pose-4k-marvel-iphone-ipfbpdwchomr4rww.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/black-widow-pose-4k-marvel-iphone-ipfbpdwchomr4rww.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Black_Widow_Logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:01:11.344Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:01:11.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fb5b175b733208779c99"
+  },
+  "name": "Captain America The Winter Soldier",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/JeffJacobs_WinterSoldier.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/JeffJacobs_WinterSoldier.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Captain_America_The_Winter_Soldier_logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:02:35.439Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:02:35.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fba2175b733208779c9d"
+  },
+  "name": "Captain Marvel",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/captain_marvel_poster_1688.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/captain_marvel_poster_1688.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/959px-Captain_Marvel_Logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:03:46.552Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:03:46.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fbe4175b733208779ca1"
+  },
+  "name": "Doctor Strange",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/cm-ss-00542_rs_20_wide-764d77b659bdc62277df63015e39041280c9c588.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/cm-ss-00542_rs_20_wide-764d77b659bdc62277df63015e39041280c9c588.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Doctor-Strange-logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:04:52.788Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:04:52.788Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fc1d175b733208779ca5"
+  },
+  "name": "Doctor Strange in the Multiverse of Madness",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/NJXQ8h3mUd9mhsh2m8xpba.jpg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/NJXQ8h3mUd9mhsh2m8xpba.jpg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Multiverse_Of_Madness_Logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:05:49.498Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:05:49.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fd1d175b733208779cab"
+  },
+  "name": "Eternals",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/download.jpeg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/download.jpeg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Eternals_Logo_Dark.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2018",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:10:05.007Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:10:05.007Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6674fd5a175b733208779caf"
+  },
+  "name": "Iron Man",
+  "desc": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "thumb_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/thumb-images/header-credit-Marvel-Studios_5f741da26f175.jpeg",
+  "cover_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/cover-images/header-credit-Marvel-Studios_5f741da26f175.jpeg",
+  "name_img": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/name-images/Iron_Man_-_2008_movie_logo.svg.png",
+  "video": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/main-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "duration": "150 min",
+  "age_limit": 18,
+  "genre": "Sci-fi",
+  "year": "2008",
+  "isSeries": false,
+  "trailer": "https://bucket-ankit321.s3.ap-southeast-2.amazonaws.com/trailer-videos/Marvel Studios' Black Widow _ Official Trailer.mp4",
+  "createdAt": {
+    "$date": "2024-06-21T04:11:06.535Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-21T04:11:06.535Z"
+  },
+  "__v": 0
+}]
