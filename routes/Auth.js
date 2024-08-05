@@ -40,7 +40,7 @@ router.post("/register", async (req, res) => {
 
     res.json(info);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json("Check Params");
   }
 });
 
