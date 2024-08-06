@@ -178,7 +178,6 @@ router.get("/preview2/:type", authorize_user, async (req, res) => {
       };
 
       let chosen_content = shuffle(contents).slice(0, 3);
-      console.log("content is : ", chosen_content.length);
 
       let data = chosen_content.map((item, index) => item._doc);
 
